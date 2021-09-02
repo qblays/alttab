@@ -587,11 +587,11 @@ int setFocus(int winNdx)
         // fixes #28.
         // it must be protected by testing IsViewable in the same way
         // as in x.c, or BadMatch happens after switching desktops.
-        XWindowAttributes att;
-        XGetWindowAttributes(dpy, g.winlist[winNdx].id, &att);
-        if (att.map_state == IsViewable)
-            XSetInputFocus(dpy, g.winlist[winNdx].id, RevertToParent,
-                           CurrentTime);
+        /*XWindowAttributes att;*/
+        /*XGetWindowAttributes(dpy, g.winlist[winNdx].id, &att);*/
+        /*if (att.map_state == IsViewable)*/
+            /*XSetInputFocus(dpy, g.winlist[winNdx].id, RevertToParent,*/
+                           /*CurrentTime);*/
         break;
     case WM_TWM:
         r = ewmh_setFocus(winNdx, 0);
